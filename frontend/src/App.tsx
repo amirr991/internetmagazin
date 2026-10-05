@@ -41,17 +41,29 @@ function App() {
   );
 
   if (loading) {
-    return <h1>Загрузка...</h1>;
+    return (
+      <div className="message">
+        <h1>Загрузка товаров...</h1>
+      </div>
+    );
   }
 
   if (error) {
-    return <h1>{error}</h1>;
+    return (
+      <div className="message">
+        <h1>{error}</h1>
+        <button onClick={() => window.location.reload()}>
+          Повторить
+        </button>
+      </div>
+    );
   }
 
   return (
     <div className="shop">
       <header className="header">
         <h1>Интернет-магазин</h1>
+
         <div className="cart-info">
           Корзина: {cart.length} | {total} ₸
         </div>

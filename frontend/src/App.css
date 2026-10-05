@@ -107,3 +107,35 @@ body {
 .remove-button:hover {
   background: #ccc !important;
 }
+
+.message {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.message button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  background: #111;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+@media (max-width: 600px) {
+  .header {
+    padding: 20px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .products {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+}
