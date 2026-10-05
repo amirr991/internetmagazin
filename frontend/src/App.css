@@ -75,3 +75,8 @@ body {
 .product-info button:hover {
   background: #333;
 }
+
+.product-info .category {
+  color: #888;
+  font-size: 14px;
+}

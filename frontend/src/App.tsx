@@ -48,6 +48,8 @@ function App() {
               <h2>{product.title}</h2>
 
               <p>{product.description}</p>
+              
+              <p>Категория: {product.category.name}</p>
 
               <strong>{product.price} ₸</strong>
 
