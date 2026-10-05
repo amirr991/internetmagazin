@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f4f6;
+  color: #111;
+}
+
+.shop {
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: #111;
+  color: white;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.cart-info {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 25px;
+  padding: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.product-card {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 20px;
+}
+
+.product-info h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.product-info p {
+  color: #666;
+}
+
+.product-info .category {
+  font-size: 14px;
+  color: #888;
+}
+
+.product-info strong {
+  display: block;
+  font-size: 22px;
+  margin: 18px 0;
+}
+
+.product-info button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #111;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.product-info button:hover {
+  background: #333;
+}
+
+.remove-button {
+  margin-top: 10px;
+  background: #ddd !important;
+  color: #111 !important;
+}
+
+.remove-button:hover {
+  background: #ccc !important;
+}
+
+.message {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.message button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  background: #111;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+@media (max-width: 600px) {
+  .header {
+    padding: 20px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .products {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+}
